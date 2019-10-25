@@ -51,14 +51,5 @@ class Trie:
             return "None "
         return currentNode.value
     
-def makeTrie(words):
-    index = 0
-    trie = Trie()
-    for word in words:
-        trie.insert(word,index)
-        index = index + 1 
-    return trie
 
-trie = makeTrie(['hello', 'hat', 'her', 'haaaa','ha'])
-x = trie.searchTrie('h')
-print(x)
+
