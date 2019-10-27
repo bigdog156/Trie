@@ -10,13 +10,16 @@ def makeTrie(words):
 
 if __name__ == "__main__":
 
-    f= open("data.txt")
-    content = f.read()
-    print(content)
+    f= open("data.txt",'a')
     
-    f.seek(10)
+    f.seek(20)
+    f.write("\nokela lakeo")
+    f.close()
+    f= open("data.txt")
     contentNext = f.read()
     print(contentNext)
+
+
 
     trie = makeTrie(['hello', 'hat', 'her', 'haaaa','ha'])
     x = trie.searchTrie('h')
