@@ -1,3 +1,13 @@
-hello:0
-help:1
-hell:2
+0:hello
+9:provider
+18:free
+27:school
+38:action
+48:tree
+52:house
+56:sorry
+64:change
+73:like
+79:dictionary
+87:love
+97:happy

@@ -46,10 +46,9 @@ class Trie:
                 currentWord = currentWord[1:]
                 
             else:
-                return " Not found"
+                return -1
         if currentNode.value == -1:
-            return "None "
+            return -2
         return currentNode.value
     
-
-
+    
