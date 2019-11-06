@@ -36,21 +36,24 @@ def preProcessFile(pathText, pathMean):
 def addNodeTrie(word, mean,trieCurrent):
     fileMean = open("mean.txt",'a+')
     fileData = open("data.txt",'a+')
+    checkInData = trieCurrent.searchTrie(word)
+    if checkInData == -1 or checkInData == -2:
 
-    #Thêm vào Mean.txt
-    fileMean.seek(0,2)
-    lenMean = len(mean)
-    fileMean.write(mean+"\n")
-    indexMean = fileMean.tell() - lenMean -1
-    #Tiếp tục thêm vị trí SeekFile của file Data 
+        #Thêm vào Mean.txt
+        fileMean.seek(0,2)
+        lenMean = len(mean)
+        fileMean.write(mean+"\n")
+        indexMean = fileMean.tell() - lenMean -1
+        #Tiếp tục thêm vị trí SeekFile của file Data 
 
-    fileData.seek(0,2)
-    fileData.write(str(indexMean)+":"+word+"\n")
-    fileData.close()
-    fileMean.close()
+        fileData.seek(0,2)
+        fileData.write(str(indexMean)+":"+word+"\n")
+        fileData.close()
+        fileMean.close()
 
-    trieCurrent.insert(word,indexMean)
-
+        trieCurrent.insert(word,indexMean)
+        return "Add success"
+    return "Add fail"
     
 # Xử lí file dữ liệu để tạo Dict 
 if __name__ == "__main__":
@@ -59,6 +62,7 @@ if __name__ == "__main__":
     
     fileMean = open("mean.txt",'r+')
     fileData = open("data.txt",'r+')
+    
     data = processFileToArray("data.txt")
 
     trie = makeTrie(data,trie)
