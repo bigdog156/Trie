@@ -12,3 +12,9 @@
 87:love
 97:happy
 104:happy
+113:error
+117:hero
+126:cute girl
+140:phone
+151:hello
+161:superman

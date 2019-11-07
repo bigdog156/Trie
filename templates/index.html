@@ -1,0 +1,30 @@
+{% extends 'temp.html' %}
+
+{% block content %}
+<div class="container" >
+        <div>
+                    <h1 style="
+                    align-items: center;
+                    color: rgb(3, 3, 3);
+                    padding-top: 200px;
+                    ">~~~ Lạc Lối ~~~</h1>
+                    <br>
+                    <form method="GET">
+                        <input name="name" type="text" value="{{search}}"  class="form-control" id="exampleInputPassword1" placeholder="Nhập từ cần tìm ... <3">
+                    </form> 
+                    <br>
+                    <br>
+                    <p>{{name}}</p>
+                    <br>
+                    <br>
+                    <br>
+                    <form   method="POST">
+                        <input name="newWord" type="text" value=""  class="form-control" id="exampleInputPassword1" placeholder="Thêm từ mới vào LẠC LỐI...">
+                        <br>
+                        <input name="mean" type="text" value=""  class="form-control" id="exampleInputPassword1" placeholder="Mean ... ">
+                        <br>
+                        <button  method="POST" class="btn btn-outline-success my-2 my-sm-0" >Thêm ...</button>
+                    </form>
+        </div>
+</div>
+{% endblock %}
